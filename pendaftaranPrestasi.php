@@ -15,9 +15,10 @@ class PendaftaranPrestasi extends Pendaftaran {
         $this->tingkatPrestasi = $data['tingkat_prestasi'] ?? '';
     }
 
-    // Implementasi abstract method hitungTotalBiaya (Contoh: Potongan 25%)
+    // TAHAP 5: Overriding hitungTotalBiaya() - Jalur Prestasi
+    // Total Biaya = biayaPendaftaranDasar - 50000 (Potongan insentif Rp50.000)
     public function hitungTotalBiaya() {
-        return $this->biayaPendaftaranDasar * 0.75;
+        return $this->biayaPendaftaranDasar - 50000;
     }
 
     // Implementasi abstract method tampilkanInfoJalur sesuai soal Tahap 3

@@ -15,7 +15,8 @@ class PendaftaranReguler extends Pendaftaran {
         $this->lokasiKampus = $data['lokasi_kampus'] ?? '';
     }
 
-    // Implementasi abstract method hitungTotalBiaya
+    // TAHAP 5: Overriding hitungTotalBiaya() - Jalur Reguler
+    // Total Biaya = biayaPendaftaranDasar (Tarif standar murni)
     public function hitungTotalBiaya() {
         return $this->biayaPendaftaranDasar;
     }

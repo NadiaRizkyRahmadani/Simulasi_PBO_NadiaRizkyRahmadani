@@ -15,9 +15,10 @@ class PendaftaranKedinasan extends Pendaftaran {
         $this->instansiSponsor = $data['instansi_sponsor'] ?? '';
     }
 
-    // Implementasi abstract method hitungTotalBiaya (Contoh: Gratis/Beasiswa)
+    // TAHAP 5: Overriding hitungTotalBiaya() - Jalur Kedinasan
+    // Total Biaya = (biayaPendaftaranDasar) * 1.25 (Surcharge administrasi khusus 25%)
     public function hitungTotalBiaya() {
-        return 0.0;
+        return $this->biayaPendaftaranDasar * 1.25;
     }
 
     // Implementasi abstract method tampilkanInfoJalur sesuai soal Tahap 3
